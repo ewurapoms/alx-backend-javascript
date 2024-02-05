@@ -21,4 +21,4 @@ Install NodeJS 12.x
 - nodejs -v
 - npm -v
 
-Install Jest, Babel and ESList by using the supplied package.json and run `npm install`.
+Install Jest, Babel and ESList by using the supplied `package.json` and run `npm install`.
