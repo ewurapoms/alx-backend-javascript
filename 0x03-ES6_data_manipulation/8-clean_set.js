@@ -3,8 +3,7 @@ export default function cleanSet(set, startString) {
     return '';
   }
   return [...set]
-    .filter((key) => key !== undefined ? key.startsWith(startString) : '')
-    .map((key) => key !== undefined ? key.slice(startString.length) : '')
+    .filter((element) => (key !== undefined ? key.startsWith(startString) : ''))
+    .map((key) => (key !== undefined ? key.slice(startString.length) : ''))
     .join('-');
 }
-
