@@ -1,18 +1,9 @@
-function calculateNumber(type, a, b) {
-    if (typeof (type) == String || type == 'SUM' || type == 'SUBTRACT' || type == 'DIVIDE') {
-        if (type == 'SUM') {
-            return Math.round(a) + Math.round(b);
-        } else if (type == 'SUBTRACT') {
-            return Math.round(a) - Math.round(b);
-        } else if (type == 'DIVIDE') {
-            if (Math.round(b) != 0) {
-                return Math.round(a) / Math.round(b);
-            }
-            return 'Error';
-        }
-    } else {
-        return 'Error'
-    }
+const Utils = require('./utils');
+
+function sendPaymentRequestToApi(totalAmount, totalShipping) {
+    const result = Utils.calculateNumber('SUM', totalAmount, totalShipping);
+    console.log(`The total is: ${result}`)
+    return result
 }
 
-module.exports = calculateNumber;
+module.exports = sendPaymentRequestToApi;
